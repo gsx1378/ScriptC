@@ -1,0 +1,19 @@
+syntax = "proto2";
+
+message ParamServerConfig {
+  optional string host = 1;
+  optional int32 port = 2;
+}
+
+message ComponentConfig {
+  optional string name = 1;
+  optional bool enable = 2;
+
+  // 模拟组件启动函数，proto不会生成这个！是我们C++自己加的业务函数
+}
+
+message AppConfig {
+  optional string xml_path = 1;
+  optional ParamServerConfig param_server = 3;
+  repeated ComponentConfig component = 4;
+}

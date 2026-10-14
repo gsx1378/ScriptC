@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+import "proto/component.proto";
+
+package dyalgo;
+
+message ParamServerConfig {
+  string host = 1;
+  int32 port = 2;
+}
+
+message AppConfig {
+  optional string xml_path = 1;
+  optional ParamServerConfig param_server = 3;
+  repeated runtime.ComponentConfig component = 4;
+
+  optional string backtrack_path = 9;
+  optional string udisk_path = 10;
+  repeated string config_pattern = 11;
+};
+
+

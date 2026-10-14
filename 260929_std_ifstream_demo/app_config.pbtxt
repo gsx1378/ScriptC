@@ -1,0 +1,399 @@
+param_server {
+  host: "0.0.0.0"
+  port: 9000
+}
+
+component {
+  name: "encrypt"
+  type: "unique"
+  class_name: "Encrypt"
+  startup: true
+  config_path: "configs/encrypt.pbtxt"
+}
+
+component {
+  name: "mmedia"
+  type: "unique"
+  class_name: "RKMMedia"
+  library_path: "lib/libmmedia.so"
+  startup: true
+  config_path: "configs/mmedia.pbtxt"
+}
+
+component {
+  name: "adas"
+  type: "unique"
+  class_name: "Adas"
+  library_path: "lib/libadas.so"
+  startup: false
+  start_delay: 500
+  config_path: "configs/adas_lite.pbtxt"
+}
+
+component {
+  name: "dms"
+  type: "unique"
+  class_name: "DMS"
+  library_path: "lib/libdms.so"
+  startup: false
+  start_delay: 500
+  config_path: "configs/dms.pbtxt"
+}
+
+component {
+  name: "hod"
+  type: "unique"
+  class_name: "HOD"
+  library_path: "lib/libhod.so"
+  startup: false
+  start_delay: 500
+  config_path: "configs/hod.pbtxt"
+}
+
+component {
+  name: "pfa-front"
+  type: "unique"
+  class_name: "PFA"
+  library_path: "lib/libpfa.so"
+  startup: false
+  start_delay: 500
+  config_path: "configs/pfa_front.pbtxt"
+}
+
+component {
+  name: "pfa-behind"
+  type: "unique"
+  class_name: "PFA"
+  library_path: "lib/libpfa.so"
+  startup: false
+  start_delay: 500
+  config_path: "configs/pfa_behind.pbtxt"
+}
+
+component {
+  name: "bsd"
+  type: "unique"
+  class_name: "BSD"
+  library_path: "lib/libbsd.so"
+  startup: false
+  start_delay: 500
+  config_path: "configs/bsd_lite.pbtxt"
+}
+
+component {
+  name: "bsd-front"
+  type: "unique"
+  class_name: "BSD"
+  library_path: "lib/libbsd.so"
+  startup: false
+  start_delay: 500
+  config_path: "configs/bsd_front_lite.pbtxt"
+}
+
+component {
+  name: "bsd-behind"
+  type: "unique"
+  class_name: "BSD"
+  library_path: "lib/libbsd.so"
+  startup: false
+  start_delay: 500
+  config_path: "configs/bsd_behind_lite.pbtxt"
+}
+
+component {
+  name: "bsd-left"
+  type: "unique"
+  class_name: "BSD"
+  library_path: "lib/libbsd.so"
+  startup: false
+  start_delay: 500
+  config_path: "configs/bsd_left_lite.pbtxt"
+}
+
+component {
+  name: "bsd-right"
+  type: "unique"
+  class_name: "BSD"
+  library_path: "lib/libbsd.so"
+  startup: false
+  start_delay: 500
+  config_path: "configs/bsd_right_lite.pbtxt"
+}
+
+component {
+  name: "bsd-leftfront"
+  type: "unique"
+  class_name: "BSD"
+  library_path: "lib/libbsd.so"
+  startup: false
+  start_delay: 500
+  config_path: "configs/bsd_leftfront_lite.pbtxt"
+}
+
+component {
+  name: "bsd-leftbehind"
+  type: "unique"
+  class_name: "BSD"
+  library_path: "lib/libbsd.so"
+  startup: false
+  start_delay: 500
+  config_path: "configs/bsd_leftbehind_lite.pbtxt"
+}
+
+component {
+  name: "bsd-rightfront"
+  type: "unique"
+  class_name: "BSD"
+  library_path: "lib/libbsd.so"
+  startup: false
+  start_delay: 500
+  config_path: "configs/bsd_rightfront_lite.pbtxt"
+}
+
+component {
+  name: "bsd-rightbehind"
+  type: "unique"
+  class_name: "BSD"
+  library_path: "lib/libbsd.so"
+  startup: false
+  start_delay: 500
+  config_path: "configs/bsd_rightbehind_lite.pbtxt"
+}
+
+component {
+  name: "bsr-front"
+  type: "unique"
+  class_name: "BSR"
+  library_path: "lib/libbsr.so"
+  startup: false
+  start_delay: 500
+  config_path: "configs/bsr_front_lite.pbtxt"
+}
+
+component {
+  name: "bsr-behind"
+  type: "unique"
+  class_name: "BSR"
+  library_path: "lib/libbsr.so"
+  startup: false
+  start_delay: 500
+  config_path: "configs/bsr_behind_lite.pbtxt"
+}
+
+component {
+  name: "bsr-left"
+  type: "unique"
+  class_name: "BSR"
+  library_path: "lib/libbsr.so"
+  startup: false
+  start_delay: 500
+  config_path: "configs/bsr_left_lite.pbtxt"
+}
+
+component {
+  name: "bsr-right"
+  type: "unique"
+  class_name: "BSR"
+  library_path: "lib/libbsr.so"
+  startup: false
+  start_delay: 500
+  config_path: "configs/bsr_right_lite.pbtxt"
+}
+
+component {
+  name: "bsr-leftfront"
+  type: "unique"
+  class_name: "BSR"
+  library_path: "lib/libbsr.so"
+  startup: false
+  start_delay: 500
+  config_path: "configs/bsr_leftfront_lite.pbtxt"
+}
+
+component {
+  name: "bsr-leftbehind"
+  type: "unique"
+  class_name: "BSR"
+  library_path: "lib/libbsr.so"
+  startup: false
+  start_delay: 500
+  config_path: "configs/bsr_leftbehind_lite.pbtxt"
+}
+
+component {
+  name: "bsr-rightfront"
+  type: "unique"
+  class_name: "BSR"
+  library_path: "lib/libbsr.so"
+  startup: false
+  start_delay: 500
+  config_path: "configs/bsr_rightfront_lite.pbtxt"
+}
+
+component {
+  name: "bsr-rightbehind"
+  type: "unique"
+  class_name: "BSR"
+  library_path: "lib/libbsr.so"
+  startup: false
+  start_delay: 500
+  config_path: "configs/bsr_rightbehind_lite.pbtxt"
+}
+
+component {
+  name: "mois"
+  type: "unique"
+  class_name: "MOIS"
+  library_path: "lib/libmois.so"
+  startup: false
+  start_delay: 500
+  config_path: "configs/mois.pbtxt"
+}
+
+component {
+  name: "svm"
+  type: "unique"
+  class_name: "RKAVM"
+  library_path: "lib/libavm.so"
+  startup: false
+  config_path: "configs/avm.pbtxt"
+}
+
+component {
+  name: "svm-front"
+  type: "unique"
+  class_name: "PERPAVM"
+  library_path: "lib/libavm.so"
+  startup: false
+  config_path: "configs/avm-front.pbtxt"
+}
+
+component {
+  name: "svm-behind"
+  type: "unique"
+  class_name: "PERPAVM"
+  library_path: "lib/libavm.so"
+  startup: false
+  config_path: "configs/avm-behind.pbtxt"
+}
+
+component {
+  name: "svm-left"
+  type: "unique"
+  class_name: "PERPAVM"
+  library_path: "lib/libavm.so"
+  startup: false
+  config_path: "configs/avm-left.pbtxt"
+}
+
+component {
+  name: "svm-right"
+  type: "unique"
+  class_name: "PERPAVM"
+  library_path: "lib/libavm.so"
+  startup: false
+  config_path: "configs/avm-right.pbtxt"
+}
+
+component {
+  name: "zcrossing"
+  type: "unique"
+  class_name: "Zcrossing"
+  library_path: "lib/libzcrossing.so"
+  startup: false
+  start_delay: 500
+  config_path: "configs/zcrossing.pbtxt"
+}
+
+component {
+  name: "cms-right"
+  type: "unique"
+  class_name: "CMS"
+  library_path: "lib/libcms.so"
+  startup: false
+  start_delay: 500
+  config_path: "configs/cms-right.pbtxt"
+}
+
+component {
+  name: "cms-left"
+  type: "unique"
+  class_name: "CMS"
+  library_path: "lib/libcms.so"
+  startup: false
+  start_delay: 500
+  config_path: "configs/cms-left.pbtxt"
+}
+
+component {
+  name: "tsr"
+  type: "unique"
+  class_name: "TSR"
+  library_path: "lib/libtsr.so"
+  startup: false
+  start_delay: 500
+  config_path: "configs/tsr.pbtxt"
+}
+
+component {
+  name: "trajectory"
+  type: "unique"
+  class_name: "Trajectory"
+  library_path: "lib/libtrajectory.so"
+  startup: false
+  start_delay: 500
+  config_path: "configs/trajectory.pbtxt"
+}
+
+component {
+  name: "shm_vehicleinfo"
+  type: "unique"
+  class_name: "ShmVehicleInfo"
+  library_path: "lib/libexternals.so"
+  startup: true
+}
+
+component {
+  name: "shm_caninfo"
+  type: "unique"
+  class_name: "ShmCanInfo"
+  library_path: "lib/libexternals.so"
+  config_path: "configs/caninfo.pbtxt"
+  startup: false
+}
+
+component {
+  name: "indicator_wserial"
+  type: "unique"
+  class_name: "IndicatorWSerial"
+  library_path: "lib/libexternals.so"
+  startup: false
+}
+
+component {
+  name: "exporter"
+  type: "unique"
+  class_name: "Exporter"
+  library_path: "lib/libexporter.so"
+  startup: true
+  config_path: "configs/exporter.pbtxt"
+}
+
+component {
+  name: "display"
+  type: "unique"
+  class_name: "Display"
+  library_path: "lib/libdisplay.so"
+  startup: false
+  config_path: "configs/display.pbtxt"
+}
+
+udisk_path: "/mnt/udisk"
+config_pattern: "^dyalgo_\\w*.xml"
+config_pattern: "^adas\\w*.xml"
+config_pattern: "^dms\\w*.xml"
+config_pattern: "^bsd\\w*.xml"
+config_pattern: "^pfa\\w*.xml"
+config_pattern: "^svm\\w*.xml"
+config_pattern: "^zcrossing\\w*.xml"
+config_pattern: "^trajectory\\w*.xml"

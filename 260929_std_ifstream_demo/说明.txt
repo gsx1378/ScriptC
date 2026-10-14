@@ -1,0 +1,11 @@
+g++ demo.cpp -o demo -std=c++11
+
+g++ demo.cpp -o demo -std=c++11 -lprotobuf
+
+
+g++ demo.cpp proto/app_config.pb.cc -o demo -std=c++11 -lprotobuf
+g++ demo.cpp proto/app.pb.cc proto/component.pb.cc -o demo -std=c++11 -I. -lprotobuf
+
+
+./demo app_config.pbtxt
+

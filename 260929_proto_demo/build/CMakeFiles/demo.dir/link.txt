@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/demo.dir/main_proto.cpp.o CMakeFiles/demo.dir/data/proto/app_config.pb.cc.o -o demo  /usr/lib/x86_64-linux-gnu/libprotobuf.so 

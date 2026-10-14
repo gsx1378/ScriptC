@@ -1,0 +1,26 @@
+syntax = "proto3";
+import "google/protobuf/any.proto";
+
+package dyalgo.runtime;
+
+enum   ComponentPriority{
+    PriorityLow = 0; // 低优先级
+    PriorityMiddle = 1; // 中优先级
+    PriorityHigh = 2; // 高优先级
+    PriorityStartup = 3; // 最高优先级，例如程序刚初始化的基础组件
+};
+
+
+message ComponentConfig {
+    optional string name = 1;    // 组件名字
+    optional string type = 2;     // 组件类型, 默认只有 unique 一种
+    optional string class_name = 3;  // 组件实现类名
+    optional string library_path = 4;  // 组件实现的库文件路径
+    optional bool startup = 5;  // 是否启动
+    optional int32 start_delay=6;  // 启动延时
+    optional string component_type = 7;  // 组件类型
+    optional ComponentPriority priority = 8;  // 组件创建优先级
+    optional string config_path = 10;  // 配置文件路径
+    optional google.protobuf.Any config_bin = 11;   // 配置文件Any实例
+}
+
